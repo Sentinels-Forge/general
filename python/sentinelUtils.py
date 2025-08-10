@@ -1,4 +1,5 @@
 # Compiled by Sentinels' Forge
+# Github - https://github.com/Sentinels-Forge/
 import subprocess
 import sys
 import os
