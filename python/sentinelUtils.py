@@ -1,3 +1,4 @@
+# Compiled by Sentinels' Forge
 import subprocess
 import sys
 import os
