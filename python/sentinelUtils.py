@@ -34,7 +34,7 @@ def getFileHash(filepath, algorithm="sha256"):
 
 
 # Please note that the following two functions are deprecated
-# and needs to be refactored.
+# and need to be refactored.
 
 def checkProgRun():
     '''A helper function for quitCusom().'''
