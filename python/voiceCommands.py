@@ -1,8 +1,6 @@
 import speech_recognition as sr
 import ctypes
 import os
-import pygetwindow as gw
-import psutil
 from sentinelUtils import installPkg
 import subprocess
 
@@ -12,6 +10,9 @@ for pkg in pkgs:
         installPkg(pkg)
     except Exception as e:
         print(f"Could not install {pkg}: {e}")
+
+import pygetwindow as gw
+import psutil
 
 r = sr.Recognizer()
 
@@ -32,7 +33,7 @@ while True:
             if command in text.lower():
                 recognizedCommand = command
                 break
-        if recognizedCommand == "schalfen":
+        if recognizedCommand == "schlafen":
             WTS_SLEEP = 0x00000004
             ctypes.windll.kernel32.SetSystemPowerState(
                 WTS_SLEEP,
@@ -52,3 +53,4 @@ while True:
                     print(f"Closed application: {proc.info['name']}")
         elif recognizedCommand == "offen":
             subprocess.Popen(["code"])
+
