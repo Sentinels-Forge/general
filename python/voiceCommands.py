@@ -53,4 +53,3 @@ while True:
                     print(f"Closed application: {proc.info['name']}")
         elif recognizedCommand == "offen":
             subprocess.Popen(["code"])
-
