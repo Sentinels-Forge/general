@@ -4,7 +4,9 @@ def binToText(string):
     binaries = string.split()
     message = ""
     for binary in binaries:
+        # Converts the binary chunk from a base two value to base 10
         dec = int(binary, 2)
+        # gets the ASCII value from the decimal number
         full = chr(dec)
         message = message + full
     print(f"Your message says: {message}")
@@ -12,7 +14,9 @@ def binToText(string):
 def textToBin(message):
     binaryString = ""
     for letter in message:
+        # Gets the unicode number for each letter
         dec = ord(letter)
+        # Gets the binary value, and strips the 0b from the start of it
         binary = bin(dec)[2:].zfill(8)
         binaryString = binaryString + binary + " "
     print(f"Your encoded string is: {binaryString}")
@@ -26,3 +30,4 @@ while True:
         binToText(input("Please enter your binary: "))
     elif choice == "3":
         break
+
